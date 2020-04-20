@@ -17,6 +17,15 @@ By default, both options are turned on. You can customize them by opening the co
 
 Item Pickup Customization is required on the client **and** server. I would recommend using it on the client in combination with [Better Dropped Items](https://github.com/Draylar/better-dropped-items) for the best experince!
 
+### Visualization (click images for video)
+**allowItemPickup**: false
+
+<a href="https://streamable.com/cn726h"><img src="https://i.imgur.com/gGxFs0S.png" width="400"></a>
+
+**allowClickPickup**: true
+
+<a href="https://streamable.com/jpazkh"><img src="https://i.imgur.com/MUGHqB1.png" width="400"></a>
+
 ### Versioning
 | Version  | Has Release |
 | ------------- | ------------- |
