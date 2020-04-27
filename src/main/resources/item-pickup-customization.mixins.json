@@ -3,7 +3,8 @@
   "package": "draylar.ipc.mixin",
   "compatibilityLevel": "JAVA_8",
   "mixins": [
-    "ItemEntityMixin"
+    "ItemEntityMixin",
+    "ServerPlayNetworkHandlerMixin"
   ],
   "injectors": {
     "defaultRequire": 1
