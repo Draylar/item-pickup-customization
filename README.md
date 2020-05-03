@@ -1,7 +1,7 @@
 # Item Pickup Customization
-[![CurseForge](http://cf.way2muchnoise.eu/full_317756_downloads.svg)](https://www.curseforge.com/minecraft/mc-mods/item-pickup-customization)
-[![Curseforge](http://cf.way2muchnoise.eu/versions/For%20MC_317756_all.svg)](https://www.curseforge.com/minecraft/mc-mods/item-pickup-customization)
-[![](https://jitpack.io/v/Draylar/vanilla-hammers.svg)](https://jitpack.io/#Draylar/item-pickup-customization)
+[![CurseForge](http://cf.way2muchnoise.eu/full_377492_downloads.svg)](https://www.curseforge.com/minecraft/mc-mods/item-pickup-customization)
+[![Curseforge](http://cf.way2muchnoise.eu/versions/For%20MC_377492_all.svg)](https://www.curseforge.com/minecraft/mc-mods/item-pickup-customization)
+[![](https://jitpack.io/v/Draylar/item-pickup-customization.svg)](https://jitpack.io/#Draylar/item-pickup-customization)
 
 Item Pickup Customization (IPC) is a Fabric mod inspired by [ItemPhysic](https://www.curseforge.com/minecraft/mc-mods/itemphysic). It provides options to customize Item Entities and their behaviors related to picking up. The current options are:
 - toggle player item pickup on collision
