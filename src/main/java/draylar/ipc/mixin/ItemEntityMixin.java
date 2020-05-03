@@ -33,19 +33,27 @@ public abstract class ItemEntityMixin extends Entity {
 
     @Inject(method = "onPlayerCollision", at = @At("HEAD"), cancellable = true)
     private void onPlayerCollision(PlayerEntity player, CallbackInfo ci) {
-        if(!ItemPickupCustomization.CONFIG.allowItemPickup) {
+        // cancel if collision pickup is disabled
+        if(!ItemPickupCustomization.CONFIG.allowCollisionPickup) {
+            ci.cancel();
+        }
+
+        // cancel if collision requires shifting but the player isn't
+        if(ItemPickupCustomization.CONFIG.collisionRequiresShift && !player.isSneaking()) {
             ci.cancel();
         }
     }
 
     @Override
     public boolean interact(PlayerEntity player, Hand hand) {
-        if (!this.world.isClient) {
+        if (!this.world.isClient && ItemPickupCustomization.CONFIG.allowClickPickup && (!ItemPickupCustomization.CONFIG.clickRequiresShift || player.isSneaking())) {
             ItemStack itemStack = this.getStack();
             Item item = itemStack.getItem();
             int i = itemStack.getCount();
+
             if (this.pickupDelay == 0 && (this.owner == null || this.owner.equals(player.getUuid())) && player.inventory.insertStack(itemStack)) {
                 player.sendPickup(this, i);
+
                 if (itemStack.isEmpty()) {
                     this.remove();
                     itemStack.setCount(i);
