@@ -8,6 +8,7 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.stat.Stats;
+import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
 import net.minecraft.world.World;
 import org.spongepowered.asm.mixin.Mixin;
@@ -45,7 +46,7 @@ public abstract class ItemEntityMixin extends Entity {
     }
 
     @Override
-    public boolean interact(PlayerEntity player, Hand hand) {
+    public ActionResult interact(PlayerEntity player, Hand hand) {
         if (!this.world.isClient && ItemPickupCustomization.CONFIG.allowClickPickup && (!ItemPickupCustomization.CONFIG.clickRequiresShift || player.isSneaking())) {
             ItemStack itemStack = this.getStack();
             Item item = itemStack.getItem();
@@ -63,7 +64,7 @@ public abstract class ItemEntityMixin extends Entity {
             }
         }
 
-        return true;
+        return ActionResult.SUCCESS;
     }
 
     @Override
